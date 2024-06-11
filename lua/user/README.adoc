@@ -1,0 +1,22 @@
+= README
+
+== Getting Started
+
+
+I have no idea; but this goes in `~/.config/nvim/lua/user/`
+
+
+== Configuration
+
+plugins are setup in plugin/<anything>.lua
+
+they use the https://github.com/folke/lazy.nvim#-plugin-spec[Lazy] config system.
+
+Examples of use are 
+
+ - https://code.mehalter.com/AstroNvim_user/~files/master/plugins/codeium.lua
+ - https://github.com/kabinspace/AstroNvim_user/blob/master/plugins/init.lua
+
+You need to ensure the plugins are loaded; for example by setting lazy to false or through the ft trigger (file type).
+
+Still figuring out the other bits and bobs
