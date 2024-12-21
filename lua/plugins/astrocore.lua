@@ -47,6 +47,7 @@ return {
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
+        ["<leader>fg"] = { function() require("telescope.builtin").live_grep() end, desc = "Live Grep" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
@@ -66,5 +67,15 @@ return {
         -- ["<C-S>"] = false,
       },
     },
+    -- cmd = "Telescope",
+    -- opts = function()
+    --   local actions = require "telescope.actions"
+    --   return {
+    --     mappings = {
+    --       ["<C-n>"] = actions.move_selection_next,
+    --       ["<C-p>"] = actions.move_selection_previous,
+    --     },
+    --   }
+    -- end,
   },
 }

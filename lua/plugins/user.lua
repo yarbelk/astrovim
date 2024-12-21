@@ -2,20 +2,25 @@
 return {
 
   {
-    "fatih/vim-go",
-    name = "vim-go",
-    ft = "go",
-  },
-  {
-    "tpope/vim-fugitive",
-    name = "fugitive",
-    lazy = false,
+    "ray-x/go.nvim",
+    dependencies = {
+      "ray-x/guihua.lua",
+      "neovim/nvim-lspconfig",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    config = function() require("go").setup() end,
+    evet = { "CmdlineEnter" },
+    ft = { "go", "gomod" },
+    build = ':lua require("go.install").update_all_sync()',
   },
   "andweeb/presence.nvim",
   {
     "ray-x/lsp_signature.nvim",
     event = "BufRead",
     config = function() require("lsp_signature").setup() end,
+  },
+  {
+    "NeoGitOrg/neogit",
   },
 
   -- == Examples of Overriding Plugins ==
